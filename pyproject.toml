@@ -1,0 +1,59 @@
+[project]
+name = "photo-library"
+version = "0.0.1"
+description = "Local semantic image search over an Apple Photos library."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Scott Dube" },
+]
+
+# Runtime dependencies are intentionally minimal at scaffold time.
+# Will grow as Phase 0/1 work progresses. Anticipated additions:
+#   - osxphotos      (read Photos library)
+#   - mlx-clip       (CLIP embeddings on Apple Silicon)
+#   - sqlite-vec     (vector similarity in SQLite)
+#   - fastapi        (query service)
+#   - uvicorn        (ASGI server)
+#   - python-dotenv  (config loading)
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "ruff>=0.4",
+    "mypy>=1.10",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/photolib"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "UP",  # pyupgrade
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

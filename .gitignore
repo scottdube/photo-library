@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# uv
+.uv/
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.whl
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Type checking
+.mypy_cache/
+.pyre/
+.pytype/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Project-specific
+.env
+.env.local
+*.db
+*.sqlite
+*.sqlite3
+data/
+embeddings/
+thumbnails/
+photos-export/
+*.log
+
+# Photo library exports (never commit, even partially)
+*.photoslibrary/
+photos-metadata-only/
+osxphotos-export/
+
+# Models (large binary files, downloaded separately)
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
