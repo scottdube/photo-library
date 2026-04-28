@@ -24,14 +24,15 @@ Source: `README.md` lines 3–6, 14–18; `docs/project-charter.md` lines 32–4
 - **Phase 1 — Indexing pipeline (sqlite-vec, osxphotos, launchd):
   not started.** Source: `docs/project-charter.md` lines 121–128;
   `README.md` line 25.
-- **External SSD on hand as of 2026-04-27.** Samsung 990 EVO Plus 4TB +
-  OWC Express 1M2 (~$749, ordered 2026-04-24) has arrived. Photos library
-  migration to external SSD is the next hardware step before full-library
-  production indexing. Original order rationale:
-  `docs/session-log/session-2026-04-24.md` line 68.
-- **Outstanding:** ~1,452 iCloud-only photos return `None` filepath via
-  osxphotos; needs investigation before production index. Source:
-  `docs/session-log/session-2026-04-24.md` lines 53–54, 70.
+- **Photos library migrated to external SSD on 2026-04-27.** Samsung
+  990 EVO Plus 4TB + OWC Express 1M2 over Thunderbolt 4. Library now at
+  `/Volumes/4TB_Removable/Photos/Photos Library.photoslibrary`, set as
+  System Photo Library, iCloud flipped to "Download Originals to this
+  Mac." Source: `docs/session-log/session-2026-04-27.md`.
+- **1,452 None-filepath issue closed.** Post-migration osxphotos
+  diagnostics return 0 missing photos and 0 blank-path entries against
+  the full 21,493-photo filtered set. Source:
+  `docs/session-log/session-2026-04-27.md` (Results table, Key findings).
 
 ## Stack
 

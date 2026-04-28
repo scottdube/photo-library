@@ -25,11 +25,14 @@ architecture, and validation strategy.
 Phase 0 (CLIP validation via `rclip`) complete and greenlit — ~80% top-3
 relevance across 8 representative queries on a 17,866-photo index,
 including shop content (CNC, lathe, fixture plate) that Photos.app cannot
-find. Phase 1 (sqlite-vec index, osxphotos pipeline, FastAPI service,
-launchd persistence) not yet started. External SSD (Samsung 990 EVO Plus
-4TB + OWC Express 1M2) on hand as of 2026-04-27 for the Photos library
-migration that precedes full-library production indexing. See
-[docs/session-log/session-2026-04-24.md](docs/session-log/session-2026-04-24.md).
+find. Photos library migrated to external 4TB SSD on 2026-04-27;
+post-migration osxphotos diagnostics confirm zero missing-file gaps
+across the full 21,493-photo filtered set, closing the 1,452 None-filepath
+investigation from session 2026-04-24. Phase 1 (sqlite-vec index,
+osxphotos pipeline, FastAPI service, launchd persistence) not yet
+started; cleared to begin against the full library. See
+[docs/session-log/session-2026-04-24.md](docs/session-log/session-2026-04-24.md)
+and [docs/session-log/session-2026-04-27.md](docs/session-log/session-2026-04-27.md).
 
 ## Stack
 
