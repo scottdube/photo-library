@@ -22,7 +22,14 @@ architecture, and validation strategy.
 
 ## Status
 
-Planning. Phase 0 (CLIP quality validation via `rclip`) not yet started.
+Phase 0 (CLIP validation via `rclip`) complete and greenlit — ~80% top-3
+relevance across 8 representative queries on a 17,866-photo index,
+including shop content (CNC, lathe, fixture plate) that Photos.app cannot
+find. Phase 1 (sqlite-vec index, osxphotos pipeline, FastAPI service,
+launchd persistence) not yet started. External SSD (Samsung 990 EVO Plus
+4TB + OWC Express 1M2) on hand as of 2026-04-27 for the Photos library
+migration that precedes full-library production indexing. See
+[docs/session-log/session-2026-04-24.md](docs/session-log/session-2026-04-24.md).
 
 ## Stack
 
